@@ -12,4 +12,5 @@ document.addEventListener('DOMContentLoaded', () => {
     currentTarget.classList.remove('highlight');
   });
 
+  svgPanZoom(document.getElementById('svg2'));
 });
