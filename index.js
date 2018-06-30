@@ -1,16 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const ET = document.getElementById('ET')
+  const climateZones = document.querySelectorAll("g:not(#g2065):not(#layer2):not(#viewport-20180630013332566):not(#g1755)");
+  // Don't really know what these random groups are, remove them later
   // const ET = document.getElementById('layer5').querySelectorAll("path[inkscape\\:label='ET']")
 
-  ET.addEventListener('mouseenter', event => {
-    const {currentTarget} = event;
-    currentTarget.classList.add('highlight');
-  });
+  climateZones.forEach(element => {
+    element.addEventListener('mouseenter', event => {
+      const {currentTarget} = event;
+      currentTarget.classList.add('highlight');
+    })
 
-  ET.addEventListener('mouseleave', event => {
-    const {currentTarget} = event;
-    currentTarget.classList.remove('highlight');
-  });
+    element.addEventListener('mouseleave', event => {
+      const {currentTarget} = event;
+      currentTarget.classList.remove('highlight');
+    });
+  })
 
   svgPanZoom(document.getElementById('svg2'));
 });

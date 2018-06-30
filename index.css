@@ -1,8 +1,12 @@
 /*Need to escape the colon*/
 /* path[inkscape\:label='ET'] {
 } */
+#svg2 {
+  fill: lightgreen;
+  fill-opacity: 1;
+}
 
 .highlight {
-  fill: red;
+  fill: green;
   fill-opacity: 1;
 }
