@@ -4,50 +4,11 @@
     <meta charset="utf-8">
     <title>Koppen Geiger Map</title>
     <link rel="stylesheet" type="text/css" href="index.css">
-    <script src="index.js"></script>
     <script src="svg-pan-zoom.js"></script>
     <script src="d3.v3.min.js"></script>
   </head>
   <body>
-    <script>
-
-var width = 960,
-    height = 500;
-
-var svg = d3.select("body").append("svg")
-    .attr("width", width)
-    .attr("height", height);
-
-svg.append("g")
-    .attr("transform", "translate(480,50) rotate(60) scale(2)")
-  .append("rect")
-    .attr("width", 140)
-    .attr("height", 140)
-    .on("mouseover", mouseover)
-    .on("mousemove", mousemove)
-    .on("mouseout", mouseout);
-
-var div = d3.select("body").append("div")
-    .attr("class", "tooltip")
-    .style("display", "none");
-
-function mouseover() {
-  div.style("display", "inline");
-}
-
-function mousemove() {
-  div
-      .text(d3.event.pageX + ", " + d3.event.pageY)
-      .style("left", (d3.event.pageX - 34) + "px")
-      .style("top", (d3.event.pageY - 12) + "px");
-}
-
-function mouseout() {
-  div.style("display", "none");
-}
-
-</script>
-
+    <script src="index.js"></script>
     <div>
     <svg
        xmlns:dc="http://purl.org/dc/elements/1.1/"

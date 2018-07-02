@@ -2,10 +2,6 @@
   fill-opacity: 0.6;
 }
 
-#ET:hover .tooltip {
-  display: block;
-}
-
 .tooltip{
   position: absolute;
   text-align: center;
